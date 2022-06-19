@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "latoregular";
+  src: url("/font/lato-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-size: 150%;
+  font-family: latoregular, Arial, Helvetica, sans-serif;
+  background-color: rgb(255, 255, 255);
+}
+
+div {
+  padding: 1rem 0;
+  position: relative;
+}
+
+label {
+  display: block;
+  color: #009688;
+}
+
+.hidden {
+  display: none;
+}
+
+p.error {
+  color: #c71700;
+  font-size: 1.25rem;
+}
+
+input.error {
+  color: #c71700;
+  border-color: #c71700;
+}
+
+input.error ~ img {
+  display: inline-block;
+}
+
+input ~ img {
+  display: none;
+  margin-left: 0.5rem;
+  height: 20px;
+  position: absolute;
+  bottom: 52px;
+}
+
+form {
+  padding: 2rem;
+}
+
+input {
+  border: 1px solid #009688;
+  padding: 8px 16px;
+}
+
+button {
+  font-size: 1.25rem;
+  background-color: #009688;
+  border-radius: 4px;
+  border: 1px solid #009688;
+  padding: 16px 32px;
+  color: #fff;
+}
+
+p {
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constraint Validation API</title>
+    <link rel="stylesheet" href="/css/base.css" />
+    <script src="/js/validity.js" defer></script>
+  </head>
+  <body>
+    <form id="signup" action="/" novalidate>
+      <div id="errors" role="alert" aria-live="assertive" aria-atomic="true"></div>
+      <div>
+        <label for="name">Name</label>
+        <input id="name" type="text" minlength="2" required /><img src="/img/error.png" alt="" />
+        <p id="name-error-required" class="error hidden">Name is required.</p>
+        <p id="name-error-length" class="error hidden">Name must be at least 2 characters.</p>
+      </div>
+      <div>
+        <label for="country">Country</label>
+        <input id="country" type="text" pattern="[a-zA-Z]" value="The Netherlands 123" /><img src="/img/error.png" alt="" />
+        <p id="country-error-pattern" class="error hidden">Country can only contain letters.</p>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" required value="rowdy" /><img src="/img/error.png" alt="" />
+        <p id="email-error-required" class="error hidden">Email is required.</p>
+        <p id="email-error-type" class="error hidden">Email format is incorrect.</p>
+      </div>
+      <div style="padding-top: 5rem">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
+
+<!-- <div>
+        <input type="text" placeholder="MM-DD-YYYY" />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <p id="requirements">Password must be between 8 and 15 characters, including at least 3 numbers and 1 symbol.</p>
+        <input id="password" name="password" type="password" value="1234567890" aria-describedby="requirements" />
+        <input type="button" onclick="revealPassword()" value="reveal" aria-label="reveal password" />
+      </div> -->
